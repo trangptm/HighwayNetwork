@@ -13,3 +13,5 @@ I propose to modify the Highway networks so that the parameters can be shared am
 To turn on the option parameter sharing, the scripts highway_training.py and convhighway_training.py can have an option "-shared x", where x = 1 means parameters are shared and x = 0 for the original network.
 
 Experiments show that for mnist dataset, the original model outpeforms the model with parameter sharing while for some vector dataset, parameter sharing version works better (results of miniboo and sensorless datasets)
+
+Experiment logs are in /log/ folder. For mnist dataset, I ran and reported the result after 20 epochs.
