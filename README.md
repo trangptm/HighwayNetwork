@@ -5,6 +5,14 @@ More information about the model can be found in:
 
 [Training very deep network](http://papers.nips.cc/paper/5850-training-very-deep-networks)
 
+A Highway network layer is a linear combination of the previous layer and the current activation.
+
+h^t = g * h^t + (1-g) * h^(t-1)
+
+where g is a sigmoid function of h^(t-1).
+
+An interesting point is that the bias of g is initialized with a large negative number. This implies g -> 0. That means in early learning stage, the model prefers linear part, making the learning easier.
+
 There are two versions: Highway networks for vector data and Convolutional Highway networks for spatial data.
 Highway networks for vector data is already implemented in Keras layers.
 Convolutional Highway layer is written based on Keras Highway and Convolutional layers. The convolutional highway model used in the paper is in file conv_highway_model.txt
