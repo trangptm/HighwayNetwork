@@ -2,6 +2,7 @@ import numpy
 
 from keras.layers import *
 from keras import backend as K
+from keras import regularizers, initializations, activations, constraints
 from keras.engine.topology import Layer
 
 class Conv2DHighway(Layer):
